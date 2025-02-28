@@ -114,8 +114,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          mainUI = this;
          Globals.setGui(this);
          this.editor = new Editor(this);
-           FlatLightLaf.setup();
-      		 
+
          double screenWidth  = Toolkit.getDefaultToolkit().getScreenSize().getWidth();
          double screenHeight = Toolkit.getDefaultToolkit().getScreenSize().getHeight();
          // basically give up some screen space if running at 800 x 600
