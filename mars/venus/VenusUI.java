@@ -1,4 +1,5 @@
    package mars.venus;
+   import com.formdev.flatlaf.FlatDarkLaf;
    import com.formdev.flatlaf.FlatLightLaf;
    import mars.*;
    import mars.mips.dump.*;
@@ -133,7 +134,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       	// I want to keep it large, with enough room for user to get handles
          //this.setSize((int)(screenWidth*.8),(int)(screenHeight*.8));
       
-         Globals.initialize(true);			
+         Globals.initialize(true);
+           FlatDarkLaf.setup();
       
       	//  image courtesy of NASA/JPL.  
          URL im = this.getClass().getResource(Globals.imagesPath+"RedMars16.gif");
