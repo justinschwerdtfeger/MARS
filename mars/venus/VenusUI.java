@@ -1,4 +1,5 @@
    package mars.venus;
+   import com.formdev.flatlaf.FlatLightLaf;
    import mars.*;
    import mars.mips.dump.*;
    import javax.swing.*;
@@ -113,6 +114,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          mainUI = this;
          Globals.setGui(this);
          this.editor = new Editor(this);
+           FlatLightLaf.setup();
       		 
          double screenWidth  = Toolkit.getDefaultToolkit().getScreenSize().getWidth();
          double screenHeight = Toolkit.getDefaultToolkit().getScreenSize().getHeight();
