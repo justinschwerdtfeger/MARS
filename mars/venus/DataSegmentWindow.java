@@ -432,9 +432,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          dataTable.getTableHeader().setReorderingAllowed(false);
          dataTable.setRowSelectionAllowed(false);
       	// Addresses are column 0, render right-justified in mono font
-         MonoRightCellRenderer monoRightCellRenderer = new MonoRightCellRenderer(); 
+         MonoRightCellRenderer monoRightCellRenderer = new MonoRightCellRenderer();
          dataTable.getColumnModel().getColumn(ADDRESS_COLUMN).setPreferredWidth(60);
-         dataTable.getColumnModel().getColumn(ADDRESS_COLUMN).setCellRenderer( monoRightCellRenderer ); 
+         dataTable.getColumnModel().getColumn(ADDRESS_COLUMN).setCellRenderer( monoRightCellRenderer );
          // Data cells are columns 1 onward, render right-justitifed in mono font but highlightable.
          AddressCellRenderer addressCellRenderer = new AddressCellRenderer();
          for (int i=1; i<NUMBER_OF_COLUMNS; i++) {
@@ -1029,6 +1029,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                cell.setForeground( settings.getColorSettingByPosition(Settings.ODD_ROW_FOREGROUND) );				
                cell.setFont( settings.getFontByPosition(Settings.ODD_ROW_FONT) );
             }
+          cell.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, new Color(97,99,101)));
             return cell;
          }  
       

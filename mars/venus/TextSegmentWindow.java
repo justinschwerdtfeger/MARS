@@ -847,7 +847,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                cell.setBackground( settings.getColorSettingByPosition(Settings.ODD_ROW_BACKGROUND) );
                cell.setForeground( settings.getColorSettingByPosition(Settings.ODD_ROW_FOREGROUND) );				
                cell.setFont( settings.getFontByPosition(Settings.ODD_ROW_FONT) );
-            }				
+            }
+//              cell.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, new Color(97,99,101)));
             return cell;
          }  
       
@@ -872,6 +873,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                cell.setBackground( Globals.getSettings().getColorSettingByPosition(Settings.ODD_ROW_BACKGROUND) );
                cell.setForeground( Globals.getSettings().getColorSettingByPosition(Settings.ODD_ROW_FOREGROUND) );				
             }
+              cell.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, new Color(97,99,101)));
             return cell;
          }  
       }

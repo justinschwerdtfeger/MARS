@@ -237,7 +237,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    	
       private void launchIDE() {
          // System.setProperty("apple.laf.useScreenMenuBar", "true"); // Puts MARS menu on Mac OS menu bar
-         new MarsSplashScreen(splashDuration).showSplash();
+//         new MarsSplashScreen(splashDuration).showSplash();
          SwingUtilities.invokeLater(
                new Runnable() {
                   public void run() {

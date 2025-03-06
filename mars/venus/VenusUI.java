@@ -1,6 +1,8 @@
    package mars.venus;
    import com.formdev.flatlaf.FlatDarkLaf;
+   import com.formdev.flatlaf.FlatLaf;
    import com.formdev.flatlaf.FlatLightLaf;
+   import com.formdev.flatlaf.util.ColorFunctions;
    import mars.*;
    import mars.mips.dump.*;
    import javax.swing.*;
@@ -135,8 +137,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          //this.setSize((int)(screenWidth*.8),(int)(screenHeight*.8));
       
          Globals.initialize(true);
+
            FlatDarkLaf.setup();
-      
+         if (FlatLaf.isLafDark()) {
+             UIManager.put("Table.alternateRowColor", new Color(62, 65, 66));
+//             UIManager.put("Table.gridColor", Color.GREEN);
+         } else {
+             UIManager.put("Table.alternateRowColor", ColorFunctions.darken(getBackground(), 0.05f));
+         }
+
       	//  image courtesy of NASA/JPL.  
          URL im = this.getClass().getResource(Globals.imagesPath+"RedMars16.gif");
          if (im == null) {

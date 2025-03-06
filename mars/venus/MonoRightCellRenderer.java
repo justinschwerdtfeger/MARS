@@ -46,6 +46,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                                     isSelected, hasFocus, row, column);
          cell.setFont(MONOSPACED_PLAIN_12POINT);
          cell.setHorizontalAlignment(SwingConstants.RIGHT);
+           cell.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, new Color(97,99,101)));
+
          return cell;
       }  
    }
